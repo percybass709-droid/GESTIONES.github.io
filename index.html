@@ -1,1 +1,1214 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veramendi Gestiones | Asesoramiento Personalizado & Trámites Vehiculares</title>
+  <meta name="description" content="Portal oficial de Veramendi Gestiones - Asesoramiento Personalizado. Gestión de fotomultas, infracciones, descargos, transferencias e informes vehiculares en toda Argentina. Oficina en San Justo.">
+  <meta name="keywords" content="Veramendi Gestiones, Asesoramiento Personalizado, fotomultas argentina, descargos infracciones, transferencia vehiculo, informes de dominio, San Justo">
 
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            corp: {
+              50: '#f0f5fa',
+              100: '#e1ecf5',
+              200: '#c5d9eb',
+              300: '#99bfde',
+              400: '#679dce',
+              500: '#437fc0',
+              600: '#2f65a6',
+              700: '#265187',
+              800: '#153358', // Azul institucional clásico
+              900: '#0c223f', // Azul AAP oscuro
+              950: '#07162b', // Navy corporativo profundo
+            },
+            accent: {
+              blue: '#0088cc',  // Celeste AAP
+              light: '#00a8cc',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              red: '#e11d48'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          boxShadow: {
+            'corp': '0 4px 20px -2px rgba(12, 34, 63, 0.08), 0 2px 6px -1px rgba(12, 34, 63, 0.04)',
+            'corp-hover': '0 20px 30px -10px rgba(12, 34, 63, 0.15), 0 10px 15px -3px rgba(12, 34, 63, 0.07)',
+            'corp-card': '0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 font-sans selection:bg-corp-700 selection:text-white antialiased overflow-x-hidden">
+
+  <!-- ================= TOPBAR INSTITUCIONAL (Estilo Portal AAP) ================= -->
+  <div class="bg-corp-900 text-white text-xs py-2.5 px-4 border-b border-corp-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+      
+      <!-- Datos de Ubicación y Alcance -->
+      <div class="flex items-center space-x-4">
+        <span class="inline-flex items-center gap-1.5 font-medium text-slate-200">
+          <i class="fa-solid fa-location-dot text-accent-light"></i>
+          <strong class="text-white">Oficina:</strong> San Justo, Buenos Aires, Argentina
+        </span>
+        <span class="hidden md:inline-block text-corp-700">|</span>
+        <span class="hidden md:inline-flex items-center gap-1.5 text-slate-300">
+          <i class="fa-solid fa-earth-americas text-accent-light"></i>
+          <span>Atención en toda Argentina</span>
+        </span>
+      </div>
+
+      <!-- Contacto Rápido & Redes -->
+      <div class="flex items-center space-x-5 ml-auto">
+        <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20necesito%20asesoramiento%20vehicular." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-semibold text-emerald-400 hover:text-emerald-300 transition-colors">
+          <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i>
+          <span>WhatsApp: <strong class="text-white tracking-wider">985236145</strong></span>
+        </a>
+        <span class="text-corp-700">|</span>
+        <div class="flex items-center space-x-3 text-slate-300">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition-colors" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/549985236145" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= HEADER PRINCIPAL ================= -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo Institucional con Asesoramiento Personalizado -->
+        <a href="#inicio" class="flex items-center gap-3.5 group">
+          <div class="w-12 h-12 rounded-lg bg-corp-900 border-2 border-corp-700 flex items-center justify-center text-white shadow-md group-hover:bg-corp-800 transition-all duration-300">
+            <i class="fa-solid fa-car-side text-2xl text-accent-light"></i>
+          </div>
+          <div class="leading-tight">
+            <span class="text-xl sm:text-2xl font-heading font-black tracking-tight text-corp-900 block">
+              VERAMENDI <span class="text-accent-blue">GESTIONES</span>
+            </span>
+            <span class="text-[11px] font-bold uppercase tracking-widest text-slate-500 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-accent-light"></span>
+              Asesoramiento Personalizado & Trámites
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation (Limpio y Corporativo) -->
+        <nav class="hidden lg:flex items-center space-x-7">
+          <a href="#inicio" class="nav-link text-sm font-semibold text-slate-700 hover:text-corp-800 transition-colors relative py-1">Inicio</a>
+          <a href="#servicios" class="nav-link text-sm font-semibold text-slate-700 hover:text-corp-800 transition-colors relative py-1">Servicios Vehiculares</a>
+          <a href="#quienes-somos" class="nav-link text-sm font-semibold text-slate-700 hover:text-corp-800 transition-colors relative py-1">Quiénes Somos</a>
+          <a href="#beneficios" class="nav-link text-sm font-semibold text-slate-700 hover:text-corp-800 transition-colors relative py-1">¿Por Qué Elegirnos?</a>
+          <a href="#proceso" class="nav-link text-sm font-semibold text-slate-700 hover:text-corp-800 transition-colors relative py-1">Seguimiento de Trámites</a>
+          <a href="#contacto" class="nav-link text-sm font-semibold text-slate-700 hover:text-corp-800 transition-colors relative py-1">Contacto</a>
+        </nav>
+
+        <!-- CTA Principal Header (Estilo Botón Institucional AAP) -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20quiero%20hacer%20una%20consulta%20por%20un%20trámite." target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-lg bg-corp-800 hover:bg-corp-900 text-white font-heading font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all flex items-center gap-2 border border-corp-700">
+            <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+            <span>Consulta en Línea</span>
+          </a>
+        </div>
+
+        <!-- Botón Menú Mobile -->
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-lg text-slate-700 hover:text-corp-900 hover:bg-slate-100 focus:outline-none" aria-label="Menú">
+          <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Menú Mobile Desplegable -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 pt-3 pb-6 space-y-3 shadow-lg">
+      <a href="#inicio" class="mobile-nav-link block py-2.5 text-base font-semibold text-slate-800 border-b border-slate-100">Inicio</a>
+      <a href="#servicios" class="mobile-nav-link block py-2.5 text-base font-semibold text-slate-800 border-b border-slate-100">Servicios Vehiculares</a>
+      <a href="#quienes-somos" class="mobile-nav-link block py-2.5 text-base font-semibold text-slate-800 border-b border-slate-100">Quiénes Somos</a>
+      <a href="#beneficios" class="mobile-nav-link block py-2.5 text-base font-semibold text-slate-800 border-b border-slate-100">¿Por Qué Elegirnos?</a>
+      <a href="#proceso" class="mobile-nav-link block py-2.5 text-base font-semibold text-slate-800 border-b border-slate-100">Seguimiento de Trámites</a>
+      <a href="#contacto" class="mobile-nav-link block py-2.5 text-base font-semibold text-slate-800 border-b border-slate-100">Contacto</a>
+      
+      <div class="pt-3">
+        <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-bold text-white bg-corp-800 hover:bg-corp-900 shadow">
+          <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+          <span>WhatsApp 985236145</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION (Estilo Banner Institucional con Asesoramiento Personalizado con Imagen y Fusión de Colores) ================= -->
+  <section id="inicio" class="hero-section relative overflow-hidden text-white py-16 sm:py-20 lg:py-24">
+    
+    <!-- Imagen de Fondo Panorámica con Combinación de Colores Dinámica -->
+    <div class="absolute inset-0 z-0">
+      <!-- Fotografía Vehicular de Alta Definición Local -->
+      <img src="images/hero-bg.jpg" alt="Asesoramiento Personalizado Vehicular en Ruta" class="w-full h-full object-cover object-center scale-105 transform transition-transform duration-1000 ease-out">
+      
+      <!-- Degradado Multitono: Azul Marino Profundo + Azul Zafiro + Toques Cian y Ámbar -->
+      <div class="absolute inset-0 bg-gradient-to-r from-corp-950/95 via-corp-900/85 to-blue-900/70"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-corp-950 via-transparent to-corp-900/40"></div>
+      
+      <!-- Resplandores de luz que combinan colores automotrices -->
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-accent-blue/30 rounded-full blur-[100px] pointer-events-none"></div>
+      <div class="absolute top-1/2 right-0 w-[30rem] h-[30rem] bg-cyan-500/20 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute -bottom-10 left-1/3 w-80 h-80 bg-amber-500/15 rounded-full blur-[90px] pointer-events-none"></div>
+
+      <!-- Trama tecnológica sutil estilo AAP -->
+      <div class="absolute inset-0 bg-[radial-gradient(#ffffff18_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-up">
+      
+      <!-- Breadcrumb Institucional estilo AAP -->
+      <nav class="flex items-center justify-center space-x-2 text-xs text-slate-300 font-medium mb-6 uppercase tracking-wider" aria-label="Breadcrumb">
+        <span class="text-accent-light">Inicio</span>
+        <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+        <span>Asesoramiento Personalizado</span>
+        <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+        <span class="text-white font-bold">Veramendi Gestiones</span>
+      </nav>
+
+      <!-- Badge Superior de Respaldo -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-accent-light text-xs font-bold uppercase tracking-wider mb-5 shadow-inner">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <i class="fa-solid fa-shield-halved text-accent-light"></i>
+        <span>ASESORAMIENTO PERSONALIZADO OFICIAL • SAN JUSTO, ARGENTINA</span>
+      </div>
+
+      <!-- Título Principal de Alto Impacto -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight leading-tight text-white mb-4">
+        VERAMENDI <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-light via-blue-200 to-cyan-300">GESTIONES</span>
+        <span class="text-xl sm:text-3xl lg:text-4xl font-semibold text-slate-100 block mt-2 font-sans tracking-normal">
+          Gestiones Vehiculares y Fotomultas en Toda Argentina
+        </span>
+      </h1>
+
+      <!-- Bajada / Mensaje Central -->
+      <p class="text-base sm:text-xl text-slate-200 leading-relaxed font-normal max-w-3xl mx-auto mb-8">
+        Te asesoramos y gestionamos tu caso <strong class="text-white font-semibold underline decoration-accent-blue underline-offset-4">de principio a fin</strong>. Tu tranquilidad y confianza, nuestra prioridad.
+      </p>
+
+      <!-- Los 4 Pilares Requeridos Ordenados Horizontalmente -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3.5 max-w-4xl mx-auto mb-9 text-center">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-xl p-4 hover:bg-white/15 transition-all shadow-sm">
+          <i class="fa-solid fa-shield-check text-accent-light text-2xl mb-1.5"></i>
+          <div class="text-sm font-heading font-bold text-white">Siempre con Gestión Segura</div>
+          <div class="text-[11px] text-slate-300 mt-0.5">Respaldo legal oficial</div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-xl p-4 hover:bg-white/15 transition-all shadow-sm">
+          <i class="fa-solid fa-bolt text-amber-300 text-2xl mb-1.5"></i>
+          <div class="text-sm font-heading font-bold text-white">Respuesta Ágil</div>
+          <div class="text-[11px] text-slate-300 mt-0.5">Atención en el día</div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-xl p-4 hover:bg-white/15 transition-all shadow-sm">
+          <i class="fa-solid fa-magnifying-glass-chart text-emerald-300 text-2xl mb-1.5"></i>
+          <div class="text-sm font-heading font-bold text-white">Seguimiento de tu Caso</div>
+          <div class="text-[11px] text-slate-300 mt-0.5">Control paso a paso</div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-xl p-4 hover:bg-white/15 transition-all shadow-sm">
+          <i class="fa-solid fa-map-location-dot text-cyan-200 text-2xl mb-1.5"></i>
+          <div class="text-sm font-heading font-bold text-white">Atención en Toda Argentina</div>
+          <div class="text-[11px] text-slate-300 mt-0.5">Oficina en San Justo</div>
+        </div>
+      </div>
+
+      <!-- Botones de Acción / CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
+        <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20solicito%20asesoramiento%20por%20un%20trámite%20vehicular." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl font-heading font-bold text-sm uppercase tracking-wider text-corp-900 bg-white hover:bg-slate-100 shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
+          <i class="fa-brands fa-whatsapp text-emerald-600 text-xl"></i>
+          <span>Consultar por WhatsApp (985236145)</span>
+        </a>
+
+        <a href="#servicios" class="w-full sm:w-auto px-7 py-4 rounded-xl font-heading font-semibold text-sm uppercase tracking-wider text-white bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-md transition-all flex items-center justify-center gap-2">
+          <span>Ver Servicios Vehiculares</span>
+          <i class="fa-solid fa-arrow-down text-xs text-accent-light"></i>
+        </a>
+      </div>
+
+      <!-- Detalle Institucional Inferior -->
+      <div class="mt-8 pt-6 border-t border-white/15 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-300">
+        <span class="flex items-center gap-1.5">
+          <i class="fa-solid fa-circle-check text-emerald-400"></i> Diagnóstico Inicial Sin Cargo
+        </span>
+        <span class="hidden sm:inline text-white/30">•</span>
+        <span class="flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-accent-light"></i> Oficina Central en San Justo, Buenos Aires
+        </span>
+        <span class="hidden sm:inline text-white/30">•</span>
+        <span class="flex items-center gap-1.5">
+          <i class="fa-solid fa-lock text-cyan-300"></i> Gestión 100% Segura y Confiable
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= BANNER DE AVISO / RESPALDO INSTITUCIONAL ================= -->
+  <div class="bg-white border-b border-slate-200 py-4 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center sm:text-left">
+        
+        <div class="flex items-center gap-3 p-2">
+          <div class="w-10 h-10 rounded-lg bg-corp-50 text-corp-800 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-shield-check"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-corp-900">Siempre con gestión segura</h4>
+            <p class="text-[11px] text-slate-500">Respaldo profesional y transparencia</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 p-2">
+          <div class="w-10 h-10 rounded-lg bg-corp-50 text-corp-800 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-corp-900">Respuesta ágil</h4>
+            <p class="text-[11px] text-slate-500">Atención sin demoras ni filas</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 p-2">
+          <div class="w-10 h-10 rounded-lg bg-corp-50 text-corp-800 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-timeline"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-corp-900">Seguimiento de tu caso</h4>
+            <p class="text-[11px] text-slate-500">Estado continuo hasta finalizar</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 p-2">
+          <div class="w-10 h-10 rounded-lg bg-corp-50 text-corp-800 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-map-pin"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-corp-900">Atención en toda Argentina</h4>
+            <p class="text-[11px] text-slate-500">Oficina en San Justo</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SECCIÓN DE SERVICIOS VEHICULARES (Estilo AAP Cards) ================= -->
+  <section id="servicios" class="py-20 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title estilo Institucional AAP -->
+      <div class="text-center max-w-3xl mx-auto mb-10" data-aos="fade-up">
+        <span class="inline-block px-3 py-1 rounded bg-corp-100 text-corp-800 text-xs font-bold uppercase tracking-wider mb-2">
+          Catálogo Oficial
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-black text-corp-900 tracking-tight">
+          Nuestros Servicios Vehiculares
+        </h2>
+        <div class="w-16 h-1 bg-accent-blue mx-auto mt-3 mb-4 rounded-full"></div>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          Especialistas en la resolución de multas, trámites registrales y asesoramiento automotor ante juzgados de faltas y registros de todo el territorio nacional.
+        </p>
+      </div>
+
+      <!-- Barra de Pestañas con Movimiento Dinámico de Servicios -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-12" id="services-tabs" data-aos="fade-up">
+        <button type="button" class="service-tab-btn active px-4 py-2.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider border border-slate-300 bg-corp-900 text-white shadow-sm flex items-center gap-1.5" data-filter="all">
+          <i class="fa-solid fa-layer-group text-accent-light"></i>
+          <span>Todos los Servicios</span>
+        </button>
+        <button type="button" class="service-tab-btn px-4 py-2.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider border border-slate-300 bg-white text-slate-700 hover:border-corp-800 flex items-center gap-1.5" data-filter="fotomultas">
+          <i class="fa-solid fa-camera text-accent-blue"></i>
+          <span>1. Fotomultas</span>
+        </button>
+        <button type="button" class="service-tab-btn px-4 py-2.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider border border-slate-300 bg-white text-slate-700 hover:border-corp-800 flex items-center gap-1.5" data-filter="descargos">
+          <i class="fa-solid fa-scale-balanced text-accent-blue"></i>
+          <span>2. Descargos</span>
+        </button>
+        <button type="button" class="service-tab-btn px-4 py-2.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider border border-slate-300 bg-white text-slate-700 hover:border-corp-800 flex items-center gap-1.5" data-filter="transferencias">
+          <i class="fa-solid fa-right-left text-accent-blue"></i>
+          <span>3. Transferencias</span>
+        </button>
+        <button type="button" class="service-tab-btn px-4 py-2.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider border border-slate-300 bg-white text-slate-700 hover:border-corp-800 flex items-center gap-1.5" data-filter="informes">
+          <i class="fa-solid fa-file-contract text-accent-blue"></i>
+          <span>4. Informes</span>
+        </button>
+        <button type="button" class="service-tab-btn px-4 py-2.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider border border-slate-300 bg-white text-slate-700 hover:border-corp-800 flex items-center gap-1.5" data-filter="asesoramiento">
+          <i class="fa-solid fa-user-shield text-accent-blue"></i>
+          <span>5. Asesoramiento</span>
+        </button>
+      </div>
+
+      <!-- Grid de 5 Servicios Requeridos con Imágenes Referenciales -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+        
+        <!-- SERVICIO 1: Gestión de Fotomultas e Infracciones -->
+        <div class="service-card-item bg-white rounded-xl border border-slate-200 overflow-hidden shadow-corp hover:shadow-corp-hover transition-all duration-300 flex flex-col justify-between group" data-category="fotomultas" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <!-- Imagen Referencial con Badge AAP -->
+            <div class="relative h-48 overflow-hidden bg-slate-100">
+              <img src="images/servicio-fotomultas.jpg" alt="Gestión de fotomultas e infracciones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-corp-900/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-corp-900 text-white font-heading font-bold text-xs shadow">
+                01 • Infracciones
+              </span>
+              <span class="absolute bottom-3 left-3 text-white text-xs font-semibold flex items-center gap-1.5">
+                <i class="fa-solid fa-camera text-accent-light"></i> Radares & Tránsito
+              </span>
+            </div>
+
+            <!-- Contenido -->
+            <div class="p-6">
+              <h3 class="text-lg font-heading font-bold text-corp-900 mb-2 group-hover:text-corp-700 transition-colors">
+                Gestión de Fotomultas e Infracciones
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Control exhaustivo y resolución de actas en CABA, Provincia de Buenos Aires y rutas de todo el país. Evaluamos la legalidad de los radares, prescripción y quita de intereses.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-700 mb-4 border-t border-slate-100 pt-3">
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Revisión de radares no homologados</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Infracciones vencidas o con vicios legales</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Regularización para renovación o venta</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20deseo%20consultar%20por%20Gestión%20de%20Fotomultas%20e%20Infracciones." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-lg bg-corp-50 hover:bg-corp-800 text-corp-800 hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 border border-corp-200 hover:border-corp-800">
+              <span>Gestionar Fotomulta</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- SERVICIO 2: Descargos y Recursos -->
+        <div class="service-card-item bg-white rounded-xl border border-slate-200 overflow-hidden shadow-corp hover:shadow-corp-hover transition-all duration-300 flex flex-col justify-between group" data-category="descargos" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <!-- Imagen Referencial con Badge AAP -->
+            <div class="relative h-48 overflow-hidden bg-slate-100">
+              <img src="images/servicio-descargos.jpg" alt="Descargos y recursos legales vehiculares" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-corp-900/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-corp-900 text-white font-heading font-bold text-xs shadow">
+                02 • Legal
+              </span>
+              <span class="absolute bottom-3 left-3 text-white text-xs font-semibold flex items-center gap-1.5">
+                <i class="fa-solid fa-scale-balanced text-accent-light"></i> Juzgados de Faltas
+              </span>
+            </div>
+
+            <!-- Contenido -->
+            <div class="p-6">
+              <h3 class="text-lg font-heading font-bold text-corp-900 mb-2 group-hover:text-corp-700 transition-colors">
+                Descargos y Recursos
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Redacción y presentación formal de defensas jurídicas ante tribunales de faltas municipales y provinciales. Solicitamos la nulidad por falta de notificación o prescripción.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-700 mb-4 border-t border-slate-100 pt-3">
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Descargos por ausencia de cédula de notificación</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Recursos de reconsideración fundamentados</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Defensa jurídica y administrativa especializada</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20deseo%20iniciar%20un%20Descargo%20o%20Recurso." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-lg bg-corp-50 hover:bg-corp-800 text-corp-800 hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 border border-corp-200 hover:border-corp-800">
+              <span>Presentar Descargo</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- SERVICIO 3: Transferencia de Vehículos -->
+        <div class="service-card-item bg-white rounded-xl border border-slate-200 overflow-hidden shadow-corp hover:shadow-corp-hover transition-all duration-300 flex flex-col justify-between group" data-category="transferencias" data-aos="fade-up" data-aos-delay="300">
+          <div>
+            <!-- Imagen Referencial con Badge AAP -->
+            <div class="relative h-48 overflow-hidden bg-slate-100">
+              <img src="images/servicio-transferencia.jpg" alt="Transferencia vehicular automotor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-corp-900/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-corp-900 text-white font-heading font-bold text-xs shadow">
+                03 • Registral
+              </span>
+              <span class="absolute bottom-3 left-3 text-white text-xs font-semibold flex items-center gap-1.5">
+                <i class="fa-solid fa-right-left text-accent-light"></i> Compraventa & 08
+              </span>
+            </div>
+
+            <!-- Contenido -->
+            <div class="p-6">
+              <h3 class="text-lg font-heading font-bold text-corp-900 mb-2 group-hover:text-corp-700 transition-colors">
+                Transferencia de Vehículos
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Trámite registral de cambio de titularidad ágil y seguro. Confección de Formulario 08, libre deudas, verificación policial y radicación definitiva sin contratiempos.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-700 mb-4 border-t border-slate-100 pt-3">
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Formulario 08 digital y presencial</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Denuncia de venta y libre deuda de patentes</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Inscripción para autos, motos y utilitarios</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20necesito%20realizar%20la%20Transferencia%20de%20un%20vehículo." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-lg bg-corp-50 hover:bg-corp-800 text-corp-800 hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 border border-corp-200 hover:border-corp-800">
+              <span>Iniciar Transferencia</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- SERVICIO 4: Informes Vehiculares -->
+        <div class="service-card-item bg-white rounded-xl border border-slate-200 overflow-hidden shadow-corp hover:shadow-corp-hover transition-all duration-300 flex flex-col justify-between group" data-category="informes" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <!-- Imagen Referencial con Badge AAP -->
+            <div class="relative h-48 overflow-hidden bg-slate-100">
+              <img src="images/servicio-informes.jpg" alt="Informes vehiculares e histórico de dominio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-corp-900/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-corp-900 text-white font-heading font-bold text-xs shadow">
+                04 • Certificación
+              </span>
+              <span class="absolute bottom-3 left-3 text-white text-xs font-semibold flex items-center gap-1.5">
+                <i class="fa-solid fa-file-contract text-accent-light"></i> Dominio & Inhibición
+              </span>
+            </div>
+
+            <!-- Contenido -->
+            <div class="p-6">
+              <h3 class="text-lg font-heading font-bold text-corp-900 mb-2 group-hover:text-corp-700 transition-colors">
+                Informes Vehiculares
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Comprá y vendé sin sorpresas. Emitimos Informes de Dominio Histórico Oficial, Inhibición del titular, Gravámenes, Prendas y Deuda de Infracciones a nivel federal.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-700 mb-4 border-t border-slate-100 pt-3">
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Informe de Dominio oficial DNRPA</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Verificación de inhibiciones, embargos y prendas</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue text-xs"></i>
+                  <span>Entrega en formato digital en 24 a 48 hs</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20solicito%20un%20Informe%20Vehicular." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-lg bg-corp-50 hover:bg-corp-800 text-corp-800 hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 border border-corp-200 hover:border-corp-800">
+              <span>Solicitar Informe</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- SERVICIO 5: Asesoramiento Personalizado (Destacado horizontal / 2 columnas) -->
+        <div class="service-card-item bg-white rounded-xl border-2 border-corp-700/30 overflow-hidden shadow-corp hover:shadow-corp-hover transition-all duration-300 flex flex-col justify-between group md:col-span-2 lg:col-span-2" data-category="asesoramiento" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <!-- Banner Imagen con Badge AAP -->
+            <div class="relative h-48 sm:h-56 overflow-hidden bg-slate-100">
+              <img src="images/servicio-asesoramiento.jpg" alt="Asesoramiento personalizado en gestiones vehiculares" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-r from-corp-950/85 via-corp-900/70 to-transparent"></div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-accent-blue text-white font-heading font-bold text-xs shadow">
+                05 • Asesoría Integral
+              </span>
+
+              <div class="absolute bottom-4 left-6 max-w-md hidden sm:block">
+                <span class="text-xs uppercase font-bold tracking-wider text-accent-light block mb-1">Acompañamiento Profesional</span>
+                <h4 class="text-xl font-heading font-bold text-white">Tu tranquilidad y confianza, nuestra prioridad.</h4>
+              </div>
+            </div>
+
+            <!-- Contenido -->
+            <div class="p-6 sm:p-7">
+              <h3 class="text-xl font-heading font-bold text-corp-900 mb-2 group-hover:text-corp-700 transition-colors">
+                Asesoramiento Personalizado
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Te asesoramos y gestionamos tu caso de principio a fin. Diagnosticamos casos complejos, sucesiones de titulares, radicaciones en otras provincias y trámites bloqueados, brindándote la solución más económica y rápida.
+              </p>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700 border-t border-slate-100 pt-3 mb-2">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue"></i>
+                  <span>Seguimiento continuo de tu caso</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue"></i>
+                  <span>Respuestas ágiles por WhatsApp</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue"></i>
+                  <span>Atención en toda Argentina</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-blue"></i>
+                  <span>Oficina física en San Justo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 pt-0">
+            <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20solicito%20Asesoramiento%20Personalizado%20para%20mi%20caso." target="_blank" rel="noopener noreferrer" class="inline-flex py-3 px-6 rounded-lg bg-corp-800 hover:bg-corp-900 text-white font-heading font-bold text-xs uppercase tracking-wider transition-all items-center justify-center gap-2 shadow">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+              <span>Solicitar Asesoramiento Personalizado</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN QUIÉNES SOMOS (Estilo Institucional Corporativo) ================= -->
+  <section id="quienes-somos" class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Columna Izquierda: Imagen Institucional con marco formal AAP -->
+        <div class="lg:col-span-5" data-aos="fade-right">
+          <div class="relative">
+            
+            <div class="rounded-xl overflow-hidden shadow-corp border-4 border-corp-50">
+              <img src="images/quienes-somos.jpg" alt="Equipo Veramendi Gestiones - Asesoramiento Personalizado" class="w-full h-[450px] object-cover">
+            </div>
+
+            <!-- Placa flotante institucional -->
+            <div class="absolute -bottom-6 -right-6 bg-corp-900 text-white p-5 rounded-lg shadow-corp-card border border-corp-700 max-w-xs hidden sm:block">
+              <div class="flex items-center gap-2 text-accent-light text-xs font-bold uppercase mb-1">
+                <i class="fa-solid fa-certificate"></i> Garantía Legal
+              </div>
+              <p class="text-xs font-medium text-slate-200 leading-snug">
+                "Tu tranquilidad y confianza, nuestra prioridad."
+              </p>
+              <span class="text-[10px] text-slate-400 block mt-1 font-mono">San Justo • Toda Argentina</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Texto Institucional Solicitado -->
+        <div class="lg:col-span-7 space-y-6" data-aos="fade-left">
+          
+          <span class="inline-block px-3 py-1 rounded bg-corp-100 text-corp-800 text-xs font-bold uppercase tracking-wider">
+            Institucional
+          </span>
+
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-black text-corp-900 tracking-tight leading-snug">
+            ¿Tenés problemas con fotomultas, infracciones o trámites de tu vehículo? <br>
+            <span class="text-accent-blue">¡Nosotros te ayudamos!</span>
+          </h2>
+
+          <div class="w-16 h-1 bg-accent-blue rounded-full"></div>
+
+          <!-- Texto Requerido presentado con alta legibilidad institucional -->
+          <div class="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed bg-[#F8FAFC] p-6 rounded-xl border border-slate-200">
+            <p>
+              En <strong class="text-corp-900 font-bold">Veramendi Gestiones</strong>, nos especializamos en gestiones vehiculares y asesoramiento personalizado.
+            </p>
+            <p>
+              Realizamos <span class="font-semibold text-corp-800">gestión de fotomultas e infracciones</span>, <span class="font-semibold text-corp-800">descargos y recursos</span>, <span class="font-semibold text-corp-800">transferencias de vehículos</span> e <span class="font-semibold text-corp-800">informes vehiculares</span>.
+            </p>
+            <p>
+              Te ofrecemos una <strong class="text-corp-900">gestión segura</strong>, <strong class="text-corp-900">respuestas ágiles</strong> y <strong class="text-corp-900">seguimiento permanente de tu caso</strong>.
+            </p>
+            <p>
+              Brindamos <strong class="text-corp-900">atención en toda Argentina</strong>, con oficina en <strong class="text-corp-900">San Justo</strong>.
+            </p>
+            <p>
+              No pierdas tiempo ni te compliques con los trámites. Nuestro equipo te asesora y gestiona tu caso de principio a fin.
+            </p>
+            
+            <div class="border-t border-slate-200 pt-3 mt-2">
+              <p class="font-heading font-black text-base sm:text-lg text-corp-900">
+                Veramendi Gestiones. <span class="text-accent-blue">Tu tranquilidad y confianza, nuestra prioridad.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="https://wa.me/549985236145?text=¡Contactanos%20y%20recibí%20el%20asesoramiento%20que%20necesitás!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg font-heading font-bold text-xs uppercase tracking-wider text-white bg-corp-800 hover:bg-corp-900 shadow transition-all">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+              <span>¡Contactanos y recibí el asesoramiento que necesitás!</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN BENEFICIOS / POR QUÉ ELEGIRNOS ================= -->
+  <section id="beneficios" class="py-20 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="inline-block px-3 py-1 rounded bg-corp-100 text-corp-800 text-xs font-bold uppercase tracking-wider mb-2">
+          Ventajas de Nuestro Asesoramiento Personalizado
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-black text-corp-900 tracking-tight">
+          ¿Por qué confiar en Veramendi Gestiones?
+        </h2>
+        <div class="w-16 h-1 bg-accent-blue mx-auto mt-3 mb-4 rounded-full"></div>
+        <p class="text-sm text-slate-600">
+          Compromiso formal y seguridad técnica en cada una de nuestras intervenciones.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-corp hover:shadow-corp-hover transition-all group" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 rounded-lg bg-corp-50 text-corp-800 flex items-center justify-center text-xl mb-4 group-hover:bg-corp-800 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="text-base font-heading font-bold text-corp-900 mb-2">Siempre con Gestión Segura</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Procedimientos avalados legalmente con emisión de comprobantes oficiales y libre deudas auténticos.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-corp hover:shadow-corp-hover transition-all group" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 rounded-lg bg-corp-50 text-corp-800 flex items-center justify-center text-xl mb-4 group-hover:bg-corp-800 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3 class="text-base font-heading font-bold text-corp-900 mb-2">Respuesta Ágil</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Eliminamos las demoras de las oficinas públicas resolviendo y contestando tus consultas en el día.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-corp hover:shadow-corp-hover transition-all group" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-12 h-12 rounded-lg bg-corp-50 text-corp-800 flex items-center justify-center text-xl mb-4 group-hover:bg-corp-800 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <h3 class="text-base font-heading font-bold text-corp-900 mb-2">Seguimiento de tu Caso</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Información transparente en cada etapa del trámite. Sabrás exactamente el estado de tu expediente.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-corp hover:shadow-corp-hover transition-all group" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-12 h-12 rounded-lg bg-corp-50 text-corp-800 flex items-center justify-center text-xl mb-4 group-hover:bg-corp-800 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+          <h3 class="text-base font-heading font-bold text-corp-900 mb-2">Atención en Toda Argentina</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Oficina en San Justo con sistema de gestión digital con alcance a todas las provincias y municipios.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Métricas Institucionales (Contador Estilo AAP) -->
+      <div class="mt-12 bg-white rounded-xl border border-slate-200 p-8 shadow-corp" data-aos="zoom-in">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-200">
+          <div class="pt-2 md:pt-0">
+            <div class="text-3xl sm:text-4xl font-heading font-black text-corp-900 counter" data-target="10000">10,000+</div>
+            <p class="text-xs text-slate-500 font-semibold uppercase mt-1">Trámites Gestionados</p>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div class="text-3xl sm:text-4xl font-heading font-black text-corp-800">100%</div>
+            <p class="text-xs text-slate-500 font-semibold uppercase mt-1">Gestión Segura</p>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div class="text-3xl sm:text-4xl font-heading font-black text-accent-blue">24hs</div>
+            <p class="text-xs text-slate-500 font-semibold uppercase mt-1">Respuesta Inicial</p>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div class="text-3xl sm:text-4xl font-heading font-black text-corp-900">24 Prov.</div>
+            <p class="text-xs text-slate-500 font-semibold uppercase mt-1">Cobertura Nacional</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN PROCESO (CÓMO FUNCIONA / SEGUIMIENTO) ================= -->
+  <section id="proceso" class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="inline-block px-3 py-1 rounded bg-corp-100 text-corp-800 text-xs font-bold uppercase tracking-wider mb-2">
+          Flujo de Trabajo
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-black text-corp-900 tracking-tight">
+          Te asesoramos y gestionamos tu caso de principio a fin
+        </h2>
+        <div class="w-16 h-1 bg-accent-blue mx-auto mt-3 mb-4 rounded-full"></div>
+        <p class="text-sm text-slate-600">
+          Un proceso ordenado, digital y sin complicaciones para tu vehículo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="bg-[#F8FAFC] border border-slate-200 rounded-xl p-6 text-center relative group hover:border-corp-600 transition-all" data-aos="fade-up" data-aos-delay="100">
+          <span class="w-8 h-8 rounded-full bg-corp-900 text-white font-bold text-xs flex items-center justify-center mx-auto mb-3">1</span>
+          <h3 class="text-sm font-heading font-bold text-corp-900 mb-1">Recepción del Caso</h3>
+          <p class="text-xs text-slate-500">Nos enviás la patente, foto de la infracción o trámite por WhatsApp.</p>
+        </div>
+
+        <div class="bg-[#F8FAFC] border border-slate-200 rounded-xl p-6 text-center relative group hover:border-corp-600 transition-all" data-aos="fade-up" data-aos-delay="200">
+          <span class="w-8 h-8 rounded-full bg-corp-800 text-white font-bold text-xs flex items-center justify-center mx-auto mb-3">2</span>
+          <h3 class="text-sm font-heading font-bold text-corp-900 mb-1">Diagnóstico Sin Cargo</h3>
+          <p class="text-xs text-slate-500">Verificamos la viabilidad jurídica o registral y te informamos el camino a seguir.</p>
+        </div>
+
+        <div class="bg-[#F8FAFC] border border-slate-200 rounded-xl p-6 text-center relative group hover:border-corp-600 transition-all" data-aos="fade-up" data-aos-delay="300">
+          <span class="w-8 h-8 rounded-full bg-accent-blue text-white font-bold text-xs flex items-center justify-center mx-auto mb-3">3</span>
+          <h3 class="text-sm font-heading font-bold text-corp-900 mb-1">Gestión & Presentación</h3>
+          <p class="text-xs text-slate-500">Realizamos la presentación formal ante juzgados o el registro con seguimiento.</p>
+        </div>
+
+        <div class="bg-[#F8FAFC] border border-slate-200 rounded-xl p-6 text-center relative group hover:border-corp-600 transition-all" data-aos="fade-up" data-aos-delay="400">
+          <span class="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center mx-auto mb-3">4</span>
+          <h3 class="text-sm font-heading font-bold text-corp-900 mb-1">Resolución Oficial</h3>
+          <p class="text-xs text-slate-500">Te entregamos la documentación final, constancia o libre deuda definitivo.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PREGUNTAS FRECUENTES (FAQ) ================= -->
+  <section class="py-20 bg-[#F8FAFC] border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="inline-block px-3 py-1 rounded bg-corp-100 text-corp-800 text-xs font-bold uppercase tracking-wider mb-2">
+          Consultas Frecuentes
+        </span>
+        <h2 class="text-3xl font-heading font-black text-corp-900 tracking-tight">
+          Preguntas Frecuentes sobre Gestiones Vehiculares
+        </h2>
+        <div class="w-16 h-1 bg-accent-blue mx-auto mt-3 mb-4 rounded-full"></div>
+      </div>
+
+      <div class="space-y-3.5" id="faq-accordion">
+        
+        <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <button class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-corp-900 hover:text-corp-700 transition-colors">
+            <span>¿Cómo se realiza el trámite si no resido en San Justo?</span>
+            <i class="fa-solid fa-chevron-down text-corp-600 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+            Ofrecemos atención en toda Argentina. Gran parte de los juzgados de faltas y registros automotores (DNRPA) reciben trámites de manera digital o mediante presentaciones remotas. Te mantenemos informado en todo momento por WhatsApp (985236145) con documentación fehaciente.
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <button class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-corp-900 hover:text-corp-700 transition-colors">
+            <span>¿Es posible pedir el descargo o prescripción de una fotomulta?</span>
+            <i class="fa-solid fa-chevron-down text-corp-600 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+            Sí. Muchas fotomultas no cumplen con los requisitos de la Ley Nacional de Tránsito (como radares no calibrados o falta de notificación formal al titular). En Veramendi Gestiones redactamos y presentamos el recurso legal adecuado para pedir la nulidad o baja.
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <button class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-corp-900 hover:text-corp-700 transition-colors">
+            <span>¿Qué datos se necesitan para solicitar un Informe Vehicular de Dominio?</span>
+            <i class="fa-solid fa-chevron-down text-corp-600 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+            Solo necesitás brindarnos la patente (número de dominio) del rodado. Con ello gestionamos el Informe Oficial de Dominio e Inhibiciones para garantizar que el vehículo no tenga prendas, embargos o denuncias de robo antes de comprarlo o transferirlo.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN DE CONTACTO (PESTAÑA DE CONTACTOS) ================= -->
+  <section id="contacto" class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="inline-block px-3 py-1 rounded bg-corp-100 text-corp-800 text-xs font-bold uppercase tracking-wider mb-2">
+          Canales de Contacto
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-black text-corp-900 tracking-tight">
+          Pestaña de Contacto
+        </h2>
+        <div class="w-16 h-1 bg-accent-blue mx-auto mt-3 mb-4 rounded-full"></div>
+        <p class="text-sm text-slate-600">
+          Estamos a tu disposición en San Justo con atención a todo el país. Escribinos para una respuesta ágil.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Tarjetas de Información de Contacto (5 Columnas) -->
+        <div class="lg:col-span-5 space-y-5" data-aos="fade-right">
+          
+          <!-- WhatsApp Destacado Requerido -->
+          <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20me%20comunico%20desde%20la%20página%20web." target="_blank" rel="noopener noreferrer" class="block p-6 rounded-xl bg-corp-50 border-2 border-emerald-500/30 hover:border-emerald-500 transition-all shadow-sm group">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-emerald-500 text-white flex items-center justify-center text-2xl shrink-0 shadow">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 block mb-1">
+                  Atención Inmediata
+                </span>
+                <h3 class="text-xl font-heading font-black text-corp-900">
+                  WhatsApp: 985236145
+                </h3>
+                <p class="text-xs text-slate-600 mt-1">Escribinos directamente para atención ágil y personalizada.</p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Dirección San Justo Requerida -->
+          <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-corp-900 text-white flex items-center justify-center text-xl shrink-0 shadow">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
+                  Dirección
+                </span>
+                <h3 class="text-lg font-heading font-bold text-corp-900">
+                  San Justo, Argentina
+                </h3>
+                <p class="text-xs text-slate-600 mt-1">Provincia de Buenos Aires • Atención en toda Argentina</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horario de Atención -->
+          <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-corp-800 text-white flex items-center justify-center text-xl shrink-0 shadow">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
+                  Horario de Atención
+                </span>
+                <h3 class="text-base font-heading font-bold text-corp-900">
+                  Lunes a Viernes de 9:00 a 18:00 hs
+                </h3>
+                <p class="text-xs text-slate-600 mt-1">Consultas y recepción de casos 24/7 vía WhatsApp.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Redes Sociales en Contacto -->
+          <div class="p-5 rounded-xl bg-[#F8FAFC] border border-slate-200">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-600 block mb-3">
+              Redes Sociales Oficiales:
+            </span>
+            <div class="flex items-center gap-3">
+              <a href="https://wa.me/549985236145" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-emerald-500 text-white hover:bg-emerald-600 flex items-center justify-center transition-all shadow-sm" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-pink-600 text-white hover:bg-pink-700 flex items-center justify-center transition-all shadow-sm" title="Instagram">
+                <i class="fa-brands fa-instagram text-lg"></i>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-blue-600 text-white hover:bg-blue-700 flex items-center justify-center transition-all shadow-sm" title="Facebook">
+                <i class="fa-brands fa-facebook-f text-lg"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-corp-800 text-white hover:bg-corp-900 flex items-center justify-center transition-all shadow-sm" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in text-lg"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Formulario Oficial de Consulta (7 Columnas) -->
+        <div class="lg:col-span-7" data-aos="fade-left">
+          <div class="bg-white rounded-xl border border-slate-200 p-6 sm:p-8 shadow-corp">
+            
+            <div class="border-b border-slate-200 pb-4 mb-6">
+              <h3 class="text-xl font-heading font-black text-corp-900">
+                Formulario de Consulta Vehicular
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">Completá los datos y te responderemos inmediatamente vía WhatsApp o email.</p>
+            </div>
+
+            <form id="contact-form" class="space-y-4">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="form-nombre" class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">Nombre y Apellido *</label>
+                  <input type="text" id="form-nombre" required placeholder="Ej: Juan Pérez" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:border-corp-800 focus:ring-1 focus:ring-corp-800 text-sm outline-none bg-slate-50 text-slate-800">
+                </div>
+                <div>
+                  <label for="form-telefono" class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">Teléfono / WhatsApp *</label>
+                  <input type="tel" id="form-telefono" required placeholder="Ej: 11 2345-6789" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:border-corp-800 focus:ring-1 focus:ring-corp-800 text-sm outline-none bg-slate-50 text-slate-800">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="form-patente" class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">Patente / Dominio (Opcional)</label>
+                  <input type="text" id="form-patente" placeholder="Ej: AB123CD" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:border-corp-800 focus:ring-1 focus:ring-corp-800 text-sm outline-none bg-slate-50 text-slate-800 uppercase font-semibold">
+                </div>
+                <div>
+                  <label for="form-servicio" class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">Servicio Vehicular *</label>
+                  <select id="form-servicio" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:border-corp-800 focus:ring-1 focus:ring-corp-800 text-sm outline-none bg-slate-50 text-slate-800 font-medium">
+                    <option value="Gestión de fotomultas e infracciones">1 - Gestión de Fotomultas e Infracciones</option>
+                    <option value="Descargos y recursos">2 - Descargos y Recursos</option>
+                    <option value="Transferencia de vehículos">3 - Transferencia de Vehículos</option>
+                    <option value="Informes vehiculares">4 - Informes Vehiculares</option>
+                    <option value="Asesoramiento personalizado">5 - Asesoramiento Personalizado</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="form-mensaje" class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">Mensaje o Detalle del Caso *</label>
+                <textarea id="form-mensaje" rows="4" required placeholder="Describinos tu consulta o problema con la fotomulta / trámite..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:border-corp-800 focus:ring-1 focus:ring-corp-800 text-sm outline-none bg-slate-50 text-slate-800 resize-none"></textarea>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" class="w-full py-3.5 px-6 rounded-lg font-heading font-bold text-xs uppercase tracking-wider text-white bg-corp-800 hover:bg-corp-900 shadow transition-all flex items-center justify-center gap-2">
+                  <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                  <span>Enviar Consulta Directa a WhatsApp (985236145)</span>
+                </button>
+                <p class="text-center text-[11px] text-slate-500 mt-2.5 flex items-center justify-center gap-1">
+                  <i class="fa-solid fa-lock text-slate-400"></i> Tus datos son tratados de forma confidencial y segura.
+                </p>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER INSTITUCIONAL (Estilo AAP con logos requeridos) ================= -->
+  <footer class="bg-corp-950 text-white pt-16 pb-10 border-t border-corp-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-corp-800/80">
+        
+        <!-- Identidad Institucional (5 Columnas) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-corp-800 border border-corp-700 flex items-center justify-center text-white text-xl">
+              <i class="fa-solid fa-car-side text-accent-light"></i>
+            </div>
+            <div>
+              <span class="text-xl font-heading font-black tracking-tight text-white block">
+                VERAMENDI <span class="text-accent-blue">GESTIONES</span>
+              </span>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400">
+                Asesoramiento Personalizado & Trámites
+              </span>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed max-w-sm">
+            Especialistas en gestiones vehiculares: fotomultas, descargos y recursos, transferencias e informes vehiculares en toda Argentina.
+          </p>
+          <p class="text-xs font-semibold text-accent-light">
+            "Tu tranquilidad y confianza, nuestra prioridad."
+          </p>
+
+          <div class="pt-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-corp-900 border border-corp-800 text-xs text-slate-300">
+              <i class="fa-solid fa-shield-check text-emerald-400"></i> Siempre con gestión segura
+            </span>
+          </div>
+        </div>
+
+        <!-- Enlaces Rápidos (3 Columnas) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-heading font-bold text-white uppercase tracking-wider border-b border-corp-800 pb-2">
+            Servicios Principales
+          </h4>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li><a href="#servicios" class="hover:text-accent-light transition-colors">1. Gestión de Fotomultas e Infracciones</a></li>
+            <li><a href="#servicios" class="hover:text-accent-light transition-colors">2. Descargos y Recursos Legales</a></li>
+            <li><a href="#servicios" class="hover:text-accent-light transition-colors">3. Transferencia de Vehículos</a></li>
+            <li><a href="#servicios" class="hover:text-accent-light transition-colors">4. Informes Vehiculares (Dominio)</a></li>
+            <li><a href="#servicios" class="hover:text-accent-light transition-colors">5. Asesoramiento Personalizado</a></li>
+          </ul>
+        </div>
+
+        <!-- Información de Contacto & Redes (4 Columnas) -->
+        <div class="lg:col-span-4 space-y-4">
+          <h4 class="text-xs font-heading font-bold text-white uppercase tracking-wider border-b border-corp-800 pb-2">
+            Sede & Contacto
+          </h4>
+
+          <div class="space-y-2.5 text-xs text-slate-300">
+            <!-- Dirección San Justo Requerida -->
+            <div class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-accent-light mt-0.5"></i>
+              <div>
+                <strong class="text-white">Dirección:</strong> San Justo, Argentina
+              </div>
+            </div>
+
+            <!-- WhatsApp 985236145 Requerido -->
+            <div class="flex items-start gap-2.5">
+              <i class="fa-brands fa-whatsapp text-emerald-400 mt-0.5 text-sm"></i>
+              <div>
+                <strong class="text-white">WhatsApp:</strong>
+                <a href="https://wa.me/549985236145" target="_blank" rel="noopener noreferrer" class="text-emerald-400 font-bold ml-1 hover:underline">
+                  985236145
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-2.5">
+              <i class="fa-solid fa-earth-americas text-accent-light mt-0.5"></i>
+              <div>
+                <strong class="text-white">Cobertura:</strong> Atención en toda Argentina
+              </div>
+            </div>
+          </div>
+
+          <!-- Logos de Redes Sociales Requeridos al Final -->
+          <div class="pt-3">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2">
+              Redes Sociales:
+            </span>
+            <div class="flex items-center gap-2.5">
+              <!-- WhatsApp -->
+              <a href="https://wa.me/549985236145" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-corp-900 border border-corp-700 text-emerald-400 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition-all" title="WhatsApp 985236145">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+              </a>
+              <!-- Instagram -->
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-corp-900 border border-corp-700 text-pink-400 hover:bg-pink-600 hover:text-white flex items-center justify-center transition-all" title="Instagram">
+                <i class="fa-brands fa-instagram text-base"></i>
+              </a>
+              <!-- Facebook -->
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-corp-900 border border-corp-700 text-blue-400 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-all" title="Facebook">
+                <i class="fa-brands fa-facebook-f text-base"></i>
+              </a>
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-corp-900 border border-corp-700 text-accent-light hover:bg-corp-800 hover:text-white flex items-center justify-center transition-all" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in text-base"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Copyright y Leyenda -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+        <p>© 2026 Veramendi Gestiones - Asesoramiento Personalizado. San Justo, Argentina.</p>
+        <p class="text-[11px] text-slate-400">
+          Siempre con gestión segura • Respuesta ágil • Seguimiento de tu caso
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= BOTÓN FLOTANTE WHATSAPP ================= -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center group">
+    <!-- Tooltip -->
+    <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20necesito%20asesoramiento%20por%20un%20trámite." target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center mr-3 px-3.5 py-2 rounded-lg bg-corp-900 border border-corp-700 text-xs font-semibold text-white shadow-xl backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-ping"></span>
+      WhatsApp 985236145 • San Justo
+    </a>
+
+    <!-- Botón Circular Pulsante -->
+    <a href="https://wa.me/549985236145?text=Hola%20Veramendi%20Gestiones,%20necesito%20asesoramiento%20por%20un%20trámite." target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center text-3xl shadow-xl hover:scale-105 active:scale-95 transition-all duration-300" aria-label="WhatsApp Oficial">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- AOS Animation Library JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <!-- Custom Application Script -->
+  <script src="script.js"></script>
+</body>
+</html>
