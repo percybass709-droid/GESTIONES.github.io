@@ -1,7 +1,7 @@
 /**
  * VERAMENDI GESTIONES - ASESORAMIENTO PERSONALIZADO
  * Scripts interactivos para gestiones vehiculares
- * WhatsApp Oficial: 985236145 | Oficina en San Justo, Argentina
+ * WhatsApp Oficial: +54 9 11 7238-9331 | Oficina en San Justo, Argentina
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
       text += `━━━━━━━━━━━━━━━━━━━━━%0A`;
       text += `_Te asesoramos y gestionamos tu caso de principio a fin._`;
 
-      const waUrl = `https://wa.me/549985236145?text=${text}`;
+      const waUrl = `https://wa.me/5491172389331?text=${text}`;
       window.open(waUrl, '_blank');
     });
   }
